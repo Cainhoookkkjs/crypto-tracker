@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoTrack - Rastreador de Criptomoedas Premium</title>
+    <meta name="description" content="Acompanhe preços de criptomoedas em tempo real com interface moderna e elegante">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Background Orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">₿</span>
+                <h1>CryptoTrack</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Início</a></li>
+                <li><a href="#market" class="nav-link">Mercado</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
+                <li><a href="#news" class="nav-link">Notícias</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button class="btn-primary">Conectar Carteira</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon">⚡</span>
+                    <span>Dados em Tempo Real</span>
+                </div>
+                <h2 class="hero-title">
+                    Acompanhe o Mercado<br>
+                    <span class="gradient-text">Cripto em Tempo Real</span>
+                </h2>
+                <p class="hero-description">
+                    A plataforma mais completa para rastrear suas criptomoedas favoritas.
+                    Preços atualizados, gráficos interativos e análises detalhadas.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3 class="stat-value" data-count="125">0</h3>
+                        <p class="stat-label">Criptomoedas</p>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <h3 class="stat-value" data-count="50000">0</h3>
+                        <p class="stat-label">Usuários Ativos</p>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <h3 class="stat-value">R$ 2.4T</h3>
+                        <p class="stat-label">Volume 24h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Overview -->
+    <section class="market-overview" id="market">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Visão Geral do Mercado</h2>
+                <div class="market-controls">
+                    <button class="control-btn active">Top 10</button>
+                    <button class="control-btn">Trending</button>
+                    <button class="control-btn">Gainers</button>
+                    <button class="control-btn">Losers</button>
+                </div>
+            </div>
+
+            <!-- Crypto Cards Grid -->
+            <div class="crypto-grid">
+                <!-- Bitcoin -->
+                <div class="crypto-card" data-crypto="btc">
+                    <div class="card-header">
+                        <div class="crypto-info">
+                            <div class="crypto-icon btc">₿</div>
+                            <div>
+                                <h3 class="crypto-name">Bitcoin</h3>
+                                <p class="crypto-symbol">BTC</p>
+                            </div>
+                        </div>
+                        <div class="price-change positive">
+                            <span class="change-arrow">↗</span>
+                            <span class="change-percent">+2.45%</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="price-info">
+                            <p class="crypto-price">R$ 324.580,00</p>
+                            <p class="price-label">Preço Atual</p>
+                        </div>
+                        <div class="mini-chart" id="chartBtc"></div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="footer-stat">
+                            <p class="footer-label">Market Cap</p>
+                            <p class="footer-value">R$ 6.3T</p>
+                        </div>
+                        <div class="footer-stat">
+                            <p class="footer-label">Volume 24h</p>
+                            <p class="footer-value">R$ 89.2B</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ethereum -->
+                <div class="crypto-card" data-crypto="eth">
+                    <div class="card-header">
+                        <div class="crypto-info">
+                            <div class="crypto-icon eth">Ξ</div>
+                            <div>
+                                <h3 class="crypto-name">Ethereum</h3>
+                                <p class="crypto-symbol">ETH</p>
+                            </div>
+                        </div>
+                        <div class="price-change positive">
+                            <span class="change-arrow">↗</span>
+                            <span class="change-percent">+3.12%</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="price-info">
+                            <p class="crypto-price">R$ 12.450,00</p>
+                            <p class="price-label">Preço Atual</p>
+                        </div>
+                        <div class="mini-chart" id="chartEth"></div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="footer-stat">
+                            <p class="footer-label">Market Cap</p>
+                            <p class="footer-value">R$ 1.5T</p>
+                        </div>
+                        <div class="footer-stat">
+                            <p class="footer-label">Volume 24h</p>
+                            <p class="footer-value">R$ 45.8B</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cardano -->
+                <div class="crypto-card" data-crypto="ada">
+                    <div class="card-header">
+                        <div class="crypto-info">
+                            <div class="crypto-icon ada">₳</div>
+                            <div>
+                                <h3 class="crypto-name">Cardano</h3>
+                                <p class="crypto-symbol">ADA</p>
+                            </div>
+                        </div>
+                        <div class="price-change negative">
+                            <span class="change-arrow">↘</span>
+                            <span class="change-percent">-1.28%</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="price-info">
+                            <p class="crypto-price">R$ 2,85</p>
+                            <p class="price-label">Preço Atual</p>
+                        </div>
+                        <div class="mini-chart" id="chartAda"></div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="footer-stat">
+                            <p class="footer-label">Market Cap</p>
+                            <p class="footer-value">R$ 98.4B</p>
+                        </div>
+                        <div class="footer-stat">
+                            <p class="footer-label">Volume 24h</p>
+                            <p class="footer-value">R$ 12.3B</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solana -->
+                <div class="crypto-card" data-crypto="sol">
+                    <div class="card-header">
+                        <div class="crypto-info">
+                            <div class="crypto-icon sol">◎</div>
+                            <div>
+                                <h3 class="crypto-name">Solana</h3>
+                                <p class="crypto-symbol">SOL</p>
+                            </div>
+                        </div>
+                        <div class="price-change positive">
+                            <span class="change-arrow">↗</span>
+                            <span class="change-percent">+5.67%</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="price-info">
+                            <p class="crypto-price">R$ 580,50</p>
+                            <p class="price-label">Preço Atual</p>
+                        </div>
+                        <div class="mini-chart" id="chartSol"></div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="footer-stat">
+                            <p class="footer-label">Market Cap</p>
+                            <p class="footer-value">R$ 234.5B</p>
+                        </div>
+                        <div class="footer-stat">
+                            <p class="footer-label">Volume 24h</p>
+                            <p class="footer-value">R$ 28.9B</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Polkadot -->
+                <div class="crypto-card" data-crypto="dot">
+                    <div class="card-header">
+                        <div class="crypto-info">
+                            <div class="crypto-icon dot">●</div>
+                            <div>
+                                <h3 class="crypto-name">Polkadot</h3>
+                                <p class="crypto-symbol">DOT</p>
+                            </div>
+                        </div>
+                        <div class="price-change positive">
+                            <span class="change-arrow">↗</span>
+                            <span class="change-percent">+1.89%</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="price-info">
+                            <p class="crypto-price">R$ 42,30</p>
+                            <p class="price-label">Preço Atual</p>
+                        </div>
+                        <div class="mini-chart" id="chartDot"></div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="footer-stat">
+                            <p class="footer-label">Market Cap</p>
+                            <p class="footer-value">R$ 56.7B</p>
+                        </div>
+                        <div class="footer-stat">
+                            <p class="footer-label">Volume 24h</p>
+                            <p class="footer-value">R$ 8.4B</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chainlink -->
+                <div class="crypto-card" data-crypto="link">
+                    <div class="card-header">
+                        <div class="crypto-info">
+                            <div class="crypto-icon link">⬡</div>
+                            <div>
+                                <h3 class="crypto-name">Chainlink</h3>
+                                <p class="crypto-symbol">LINK</p>
+                            </div>
+                        </div>
+                        <div class="price-change negative">
+                            <span class="change-arrow">↘</span>
+                            <span class="change-percent">-0.95%</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="price-info">
+                            <p class="crypto-price">R$ 85,60</p>
+                            <p class="price-label">Preço Atual</p>
+                        </div>
+                        <div class="mini-chart" id="chartLink"></div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="footer-stat">
+                            <p class="footer-label">Market Cap</p>
+                            <p class="footer-value">R$ 42.1B</p>
+                        </div>
+                        <div class="footer-stat">
+                            <p class="footer-label">Volume 24h</p>
+                            <p class="footer-value">R$ 6.8B</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Calculator -->
+    <section class="portfolio-section" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Calculadora de Portfólio</h2>
+                <p class="section-description">Simule seus investimentos e veja o retorno potencial</p>
+            </div>
+
+            <div class="calculator-card">
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label for="cryptoSelect">Selecione a Criptomoeda</label>
+                        <select id="cryptoSelect" class="form-select">
+                            <option value="btc">Bitcoin (BTC)</option>
+                            <option value="eth">Ethereum (ETH)</option>
+                            <option value="ada">Cardano (ADA)</option>
+                            <option value="sol">Solana (SOL)</option>
+                            <option value="dot">Polkadot (DOT)</option>
+                            <option value="link">Chainlink (LINK)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="investAmount">Valor do Investimento (R$)</label>
+                        <input type="number" id="investAmount" class="form-input" placeholder="10000" value="10000">
+                    </div>
+                    <div class="form-group">
+                        <label for="timeframe">Período de Investimento</label>
+                        <select id="timeframe" class="form-select">
+                            <option value="7">7 dias</option>
+                            <option value="30" selected>30 dias</option>
+                            <option value="90">90 dias</option>
+                            <option value="365">1 ano</option>
+                        </select>
+                    </div>
+                    <button class="btn-calculate" id="calculateBtn">Calcular Retorno</button>
+                </div>
+
+                <div class="calculator-result" id="calculatorResult">
+                    <div class="result-header">
+                        <h3>Resultado da Simulação</h3>
+                        <span class="result-badge">30 dias</span>
+                    </div>
+                    <div class="result-stats">
+                        <div class="result-stat">
+                            <p class="result-label">Investimento Inicial</p>
+                            <h4 class="result-value initial">R$ 10.000,00</h4>
+                        </div>
+                        <div class="result-arrow">→</div>
+                        <div class="result-stat">
+                            <p class="result-label">Valor Estimado</p>
+                            <h4 class="result-value final">R$ 11.245,00</h4>
+                        </div>
+                    </div>
+                    <div class="result-profit positive">
+                        <span class="profit-icon">📈</span>
+                        <span class="profit-text">Lucro Estimado: </span>
+                        <span class="profit-value">+R$ 1.245,00 (+12.45%)</span>
+                    </div>
+                    <div class="result-disclaimer">
+                        * Esta é uma simulação baseada em dados históricos e não garante retornos futuros.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Tempo Real</h3>
+                    <p>Dados atualizados a cada segundo diretamente das exchanges</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Segurança</h3>
+                    <p>Proteção de dados com criptografia de ponta a ponta</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Análises</h3>
+                    <p>Gráficos e indicadores técnicos profissionais</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Global</h3>
+                    <p>Acesso a mercados cripto de todo o mundo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">₿</span>
+                        <h3>CryptoTrack</h3>
+                    </div>
+                    <p>Sua plataforma confiável para rastreamento de criptomoedas</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Produto</h4>
+                        <a href="#">Recursos</a>
+                        <a href="#">Preços</a>
+                        <a href="#">API</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Empresa</h4>
+                        <a href="#">Sobre</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Contato</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Suporte</h4>
+                        <a href="#">FAQ</a>
+                        <a href="#">Ajuda</a>
+                        <a href="#">Status</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CryptoTrack. Desenvolvido por <strong>Caio Oliveira</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
